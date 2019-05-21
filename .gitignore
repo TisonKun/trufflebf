@@ -1,0 +1,3 @@
+**/target
+**/*.class
+trufflebf-component/bf-component.jar
