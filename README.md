@@ -41,10 +41,24 @@ $ java examples.Interop
 
 ### Interop between C and TruffleBF
 
-`examples/interop.c` shows an example which interops bettern C and TruffleBF
+`examples/interop.c` shows an example which interops bettern C and
+TruffleBF.
 
 ```
 $ clang -g -O1 -c -emit-llvm -I/path/to/graalvm/jre/languages/llvm examples/interop.c
 $ lli --polyglot --jvm interop.bc
+```
+### Interop between Ruby and TruffleBF
+
+
+`examples/interop.rb` shows an example which interops bettern Ruby and
+TruffleBF.
+
+```
+$ ruby --experimental-options --single-threaded --polyglot --jvm examples/interop.rb
+Input 2 nonnegative numbers
+<your first number, e.g., 42>
+<your second number, e.g., 21>
+[the result]
 ```
 
